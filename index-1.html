@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b12">
+<title>Battle for B.O.B. — официальная страница</title>
+<style>
+:root{--bg:#090b12;--panel:#121725;--panel2:#171e30;--text:#f4f6fb;--muted:#aab3c7;--yellow:#ffd84d;--cyan:#68e1fd;--line:#283149}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#26304a 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#090b12e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 0}.brand{font-weight:900;letter-spacing:.04em}.brand span{color:var(--yellow)}nav{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}nav a:hover{color:var(--yellow)}
+.hero{padding:90px 0 75px;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}.hero h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:.98;margin:14px 0 22px;letter-spacing:-.055em}.hero h1 span{color:var(--yellow)}.hero p{color:var(--muted);max-width:600px;font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;font-weight:800;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--yellow);color:#171717;border-color:var(--yellow)}.secondary{background:var(--panel)}
+.hero-art{min-height:320px;border:1px solid #36415b;border-radius:28px;background:linear-gradient(145deg,#202a40,#111522 70%);display:grid;place-items:center;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}.hero-art:before{width:250px;height:250px;background:#ffd84d20;top:-60px;right:-40px}.hero-art:after{width:180px;height:180px;background:#68e1fd18;bottom:-60px;left:-35px}.bob-mark{position:relative;font-size:clamp(5rem,15vw,9rem);font-weight:1000;letter-spacing:-.1em;color:var(--yellow);text-shadow:0 8px 0 #a87b00,0 0 50px #ffd84d30;transform:rotate(-7deg)}.bob-mark small{display:block;text-align:center;font-size:.22em;letter-spacing:.25em;color:var(--text);text-shadow:none;margin-top:-.3em}
+section{padding:68px 0}.section-head{margin-bottom:28px}.section-head .eyebrow{margin-bottom:6px}.section-head h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0;letter-spacing:-.035em}.section-head p{color:var(--muted);margin:8px 0 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:22px}.card .icon{font-size:1.7rem}.card h3{margin:10px 0 7px}.card p{margin:0;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat{border:1px solid var(--line);border-radius:16px;padding:20px;background:#111624}.stat strong{display:block;font-size:1.45rem;color:var(--yellow)}.stat span{color:var(--muted);font-size:.9rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.shot{aspect-ratio:16/10;border:1px dashed #46516b;border-radius:16px;background:linear-gradient(135deg,#1b2335,#10141f);display:grid;place-items:center;text-align:center;padding:16px;color:#aab3c7}.shot b{display:block;color:var(--yellow);font-size:1.05rem}
+.telegram{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border:1px solid #28465a;border-radius:20px;background:linear-gradient(110deg,#102131,#121725)}.telegram h3{margin:0 0 5px}.telegram p{margin:0;color:var(--muted)}.telegram .btn{white-space:nowrap;background:#229ed9;border-color:#229ed9;color:white}
+.timeline{display:grid;gap:12px}.timeline-item{display:flex;gap:16px;padding:18px;border:1px solid var(--line);border-radius:15px;background:var(--panel)}.dot{width:12px;height:12px;border-radius:50%;background:var(--yellow);margin-top:8px;flex:0 0 auto}.timeline-item p{margin:4px 0 0;color:var(--muted)}
+.review{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:24px}.review p{color:var(--muted)}.review a{color:var(--cyan);font-weight:800}
+.download{border:1px solid #66572a;background:linear-gradient(135deg,#282315,#141725);border-radius:24px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}.download h2{margin:0 0 8px;font-size:2rem}.download p{color:var(--muted);margin:0}.download .btn{margin-top:18px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr;padding:58px 0}.hero-art{min-height:240px}.grid,.stats,.gallery{grid-template-columns:1fr}.telegram,.download{align-items:flex-start;flex-direction:column}section{padding:48px 0}nav{gap:12px}.download{padding:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">BATTLE FOR <span>B.O.B.</span></a>
+    <nav aria-label="Главная навигация">
+      <a href="#about">Об игре</a><a href="#achievements">Достижения</a><a href="#screens">Скриншоты</a><a href="#updates">Обновления</a><a href="#plans">Планы</a><a href="#download">Скачать</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Мультяшное приключение</div>
+      <h1>BATTLE FOR <span>B.O.B.</span></h1>
+      <p>Игра в стиле BFDI, созданная с любовью к объектным шоу. Исследуй игровой мир, знакомься с Бобами и становись частью проекта!</p>
+      <div class="actions"><a class="btn primary" href="https://bubatop4ik.github.io/Battle_for_bob/#download">⬇ Скачать APK</a><a class="btn secondary" href="https://t.me/BattleForBob" target="_blank" rel="noopener">Новости в Telegram ↗</a></div>
+    </div>
+    <div class="hero-art" aria-label="Декоративный логотип Battle for B.O.B."><div class="bob-mark">B.O.B.<small>BATTLE FOR</small></div></div>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">О проекте</div><h2>Что такое Battle for B.O.B.?</h2><p>Небольшая игра, вдохновлённая вселенной BFDI. Проект развивается и получает новые идеи вместе с сообществом.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">🎮</div><h3>Игровой опыт</h3><p>Погрузись в мир Battle for B.O.B. и попробуй игру на своём Android-устройстве.</p></article>
+      <article class="card"><div class="icon">🧩</div><h3>В стиле BFDI</h3><p>Мультяшная атмосфера и объектные персонажи — основа вдохновения проекта.</p></article>
+      <article class="card"><div class="icon">🚀</div><h3>Проект развивается</h3><p>Новые идеи, улучшения и новости появляются по мере работы над игрой.</p></article>
+    </div>
+  </div></section>
+
+  <section id="achievements"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Наш путь</div><h2>Достижения проекта</h2><p>Каждый этап — ещё один шаг к развитию Battle for B.O.B.</p></div>
+    <div class="stats">
+      <div class="stat"><strong>Первый релиз</strong><span>Игра стала доступна игрокам</span></div>
+      <div class="stat"><strong>Своё игровое приложение</strong><span>Проект создан и тестируется разработчиком</span></div>
+      <div class="stat"><strong>Сообщество</strong><span>Новости и связь с игроками через Telegram</span></div>
+    </div>
+  </div></section>
+
+  <section id="screens"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Галерея</div><h2>Скриншоты игры</h2><p>Здесь можно разместить реальные изображения из Battle for B.O.B.</p></div>
+    <div class="gallery"><div class="shot"><div><b>Скриншот 01</b>Добавь изображение игры</div></div><div class="shot"><div><b>Скриншот 02</b>Добавь изображение игры</div></div><div class="shot"><div><b>Скриншот 03</b>Добавь изображение игры</div></div></div>
+  </div></section>
+
+  <section id="telegram"><div class="wrap">
+    <div class="telegram"><div><h3>📢 Новости Battle for B.O.B.</h3><p>Все новости, объявления и информация об обновлениях — в Telegram-канале проекта.</p></div><a class="btn" href="https://t.me/BattleForBob" target="_blank" rel="noopener">Открыть канал ↗</a></div>
+  </div></section>
+
+  <section id="updates"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">История проекта</div><h2>Обновления</h2><p>Следи за изменениями игры. Актуальные новости публикуются в Telegram.</p></div>
+    <div class="timeline">
+      <div class="timeline-item"><span class="dot"></span><div><strong>Battle for B.O.B. — релиз v1.0</strong><p>Первая версия игры опубликована.</p></div></div>
+      <div class="timeline-item"><span class="dot"></span><div><strong>Развитие проекта</strong><p>Работа над новыми возможностями и улучшениями продолжается.</p></div></div>
+    </div>
+  </div></section>
+
+  <section id="developer"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">За проектом</div><h2>Разработчик</h2></div>
+    <div class="card"><h3>Создатель Battle for B.O.B.</h3><p>Независимый игровой проект. Идеи, разработка и тестирование — часть пути создания игры. Следи за новостями в официальном Telegram-канале.</p></div>
+  </div></section>
+
+  <section id="reviews"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Сообщество</div><h2>Отзывы игроков</h2><p>Хочешь поделиться впечатлением или предложить идею?</p></div>
+    <div class="review"><h3>Оставь отзыв в Telegram</h3><p>Напиши своё мнение, расскажи о найденных ошибках или предложи, что добавить в игру.</p><a href="https://t.me/BattleForBob" target="_blank" rel="noopener">Перейти в канал →</a></div>
+  </div></section>
+
+  <section id="plans"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Впереди</div><h2>Будущие планы</h2><p>Проект продолжит развиваться. Конкретные анонсы будут публиковаться в Telegram.</p></div>
+    <div class="grid"><article class="card"><div class="icon">✨</div><h3>Новые возможности</h3><p>Добавление идей и игровых функций.</p></article><article class="card"><div class="icon">🛠️</div><h3>Улучшения</h3><p>Работа над качеством и удобством игры.</p></article><article class="card"><div class="icon">💬</div><h3>Обратная связь</h3><p>Учитывать предложения сообщества.</p></article></div>
+  </div></section>
+
+  <section id="download"><div class="wrap">
+    <div class="download"><div><div class="eyebrow">Попробуй игру</div><h2>Готов к Battle for B.O.B.?</h2><p>Открой страницу релиза и скачай APK игры.</p><a class="btn primary" href="https://bubatop4ik.github.io/Battle_for_bob/#download" target="_blank" rel="noopener">Перейти к скачиванию ↗</a></div><div class="bob-mark" aria-hidden="true">B.O.B.</div></div>
+  </div></section>
+</main>
+<footer><div class="wrap foot"><span>© Battle for B.O.B. — независимый игровой проект</span><a href="https://t.me/BattleForBob" target="_blank" rel="noopener">Telegram ↗</a></div></footer>
+</body>
+</html>
